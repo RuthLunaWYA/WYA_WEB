@@ -1,20 +1,45 @@
-﻿
-<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-    <div class="container-fluid">
-        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Wya.Web</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+﻿<header class="main-header">
+    <nav class="container d-flex justify-content-between align-items-center">
+        <a href="/" onclick="navigate('/'); event.preventDefault();" class="navbar-brand">
+            <img src="/Public/images/logo-wya.png" alt="WYA WEB Logo" class="logo">
+        </a>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-            <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+        <div class="nav-overlay"></div>
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link active" href="/" onclick="navigate('/'); event.preventDefault();">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="/nosotros" onclick="navigate('/nosotros'); event.preventDefault();">Nosotros</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="/servicios" onclick="navigate('/servicios'); event.preventDefault();">
+                    Servicios
+                    <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 4L6 8L10 4" stroke="var(--color-wya-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/servicios/integrales" onclick="navigate('/servicios/integrales'); event.preventDefault();">Servicios Integrales</a></li>
+                    <li class="dropdown sub-dropdown">
+                        <a class="dropdown-item" href="/servicios/dedicados" onclick="navigate('/servicios/dedicados'); event.preventDefault();">
+                            Servicios Dedicados
+                            <svg class="sub-dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4L6 8L10 4" stroke="var(--color-wya-3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <ul class="sub-dropdown-menu">
+                            <li><a class="sub-dropdown-item" href="/servicios/dedicados/fibra-optica" onclick="navigate('/servicios/dedicados/fibra-optica'); event.preventDefault();">Fibra Óptica</a></li>
+                            <li><a class="sub-dropdown-item" href="/servicios/dedicados/tarifas-planes" onclick="navigate('/servicios/dedicados/tarifas-planes'); event.preventDefault();">Tarifas Planes</a></li>
+                            <li><a class="sub-dropdown-item" href="/servicios/dedicados/telefonia-voip" onclick="navigate('/servicios/dedicados/telefonia-voip'); event.preventDefault();">Telefonía VOIP</a></li>
+                            <li><a class="sub-dropdown-item" href="/servicios/dedicados/correo-zimbra" onclick="navigate('/servicios/dedicados/correo-zimbra'); event.preventDefault();">Correo Zimbra</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/clientes" onclick="navigate('/clientes'); event.preventDefault();">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="/carrera" onclick="navigate('/carrera'); event.preventDefault();">Carrera</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contacto" onclick="navigate('/contacto'); event.preventDefault();">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
