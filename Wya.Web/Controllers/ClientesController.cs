@@ -2,11 +2,11 @@
 
 namespace Wya.Web.Controllers
 {
-    public class ServicesController : Controller
+    public class ClientesController : Controller
     {
         public IActionResult Index()
         {
-            return View("Services");
+            return View("Clientes");
         }
     }
 }

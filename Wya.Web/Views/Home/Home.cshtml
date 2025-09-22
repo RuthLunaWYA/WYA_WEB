@@ -1,8 +1,9 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Inicio";
 }
 
-<section class="hero d-flex align-items-center" style="background-image: url('/images/banner-inicio.webp');">
+
+<section class="hero d-flex align-items-center section-animate" style="background-image: url('/images/banner-inicio.webp');">
     <div class="container text-start">
         <h1 class="hero-title">WYA SOLUCIONES <br>INTEGRALES</h1>
         <p class="hero-subtitle">La clave para llevar tu negocio al siguiente nivel</p>
@@ -16,7 +17,7 @@
     </div>
 </section>
 
-<section id="next-section">
+<section id="next-section" class="section-animate">
     <div class="container">
         <h2 class="title">ÚLTIMAS NOTICIAS</h2>
 
@@ -24,7 +25,7 @@
             <div class="carousel-track">
                 <!-- Slide 1 -->
                 <div class="card">
-                    <img src="https://picsum.photos/500/300?random=1" alt="Noticia 1">
+                    <img src="https://picsum.photos/500/300?random=1" alt="Noticia 1" loading="lazy">
                     <div class="card-content">
                         <h3>Noticia 1</h3>
                         <p>
@@ -39,7 +40,7 @@
                 </div>
                 <!-- Slide 2 -->
                 <div class="card">
-                    <img src="https://picsum.photos/500/300?random=2" alt="Noticia 2">
+                    <img src="https://picsum.photos/500/300?random=2" alt="Noticia 2" loading="lazy">
                     <div class="card-content">
                         <h3>Noticia 2</h3>
                         <p>
@@ -54,7 +55,7 @@
                 </div>
                 <!-- Slide 3 -->
                 <div class="card">
-                    <img src="https://picsum.photos/500/300?random=3" alt="Noticia 3">
+                    <img src="https://picsum.photos/500/300?random=3" alt="Noticia 3" loading="lazy">
                     <div class="card-content">
                         <h3>Noticia 3</h3>
                         <p>
@@ -69,7 +70,7 @@
                 </div>
                 <!-- Slide 4 -->
                 <div class="card">
-                    <img src="https://picsum.photos/500/300?random=4" alt="Noticia 4">
+                    <img src="https://picsum.photos/500/300?random=4" alt="Noticia 4" loading="lazy">
                     <div class="card-content">
                         <h3>Noticia 4</h3>
                         <p>
@@ -84,7 +85,7 @@
                 </div>
                 <!-- Slide 5 -->
                 <div class="card">
-                    <img src="https://picsum.photos/500/300?random=5" alt="Noticia 5">
+                    <img src="https://picsum.photos/500/300?random=5" alt="Noticia 5" loading="lazy">
                     <div class="card-content">
                         <h3>Noticia 5</h3>
                         <p>
@@ -99,7 +100,7 @@
                 </div>
                 <!-- Slide 6 -->
                 <div class="card">
-                    <img src="https://picsum.photos/500/300?random=6" alt="Noticia 6">
+                    <img src="https://picsum.photos/500/300?random=6" alt="Noticia 6" loading="lazy">
                     <div class="card-content">
                         <h3>Noticia 6</h3>
                         <p>
@@ -121,7 +122,7 @@
         </div>
     </div>
 </section>
-<section class="features-section">
+<section class="features-section section-animate">
     <div class="column">
         <h3><i class="fa-solid fa-clock"></i> Puntualidad</h3>
         <p>Tu tiempo es valioso. El nuestro también.</p>
@@ -135,7 +136,7 @@
         <p>Donde la calidad es la norma, no la excepción.</p>
     </div>
 </section>
-<section class="features-section">
+<section class="features-section section-animate">
     <div class="column-none">
         <h3>WYA Soluciones Integrales:<br> Innovación y Tecnología para <br>Empresas</h3>
         <p>
@@ -144,6 +145,28 @@
         </p>
     </div>
     <div class="column">
-        <img src="/Public/images/feacture.png" alt="WYA Soluciones Integrales">
+        <img src="~/images/feacture.webp" alt="WYA WEB Logo" loading="lazy" />
     </div>
 </section>
+
+<script>
+    // Intersection Observer to trigger fade-in animation
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('.section-animate');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the section is visible
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>

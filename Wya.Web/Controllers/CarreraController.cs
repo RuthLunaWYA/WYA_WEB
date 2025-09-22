@@ -2,11 +2,11 @@
 
 namespace Wya.Web.Controllers
 {
-    public class AboutController : Controller
+    public class CarreraController : Controller
     {
         public IActionResult Index()
         {
-            return View("About");
+            return View("Carrera");
         }
     }
 }

@@ -42,6 +42,7 @@ main {
         font-size: 1.4rem;
         margin-bottom: 10px;
         opacity: 0.9;
+        font-weight: bold;
     }
 
 .menu {
@@ -91,7 +92,7 @@ main {
     left: 0;
     width: 100%;
     height: 100px;
-    background: url("/Public/images/wave-wya.webp");
+    background: url("/images/wave-wya.webp");
     background-size: 2000px 100px;
 }
 
