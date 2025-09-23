@@ -1,18 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿// In Controllers/ErrorController.cs
+using Microsoft.AspNetCore.Mvc;
 
 namespace Wya.Web.Controllers
 {
     public class ErrorController : Controller
     {
-        [Route("Error/{statusCode}")]
-        public IActionResult HttpStatusCodeHandler(int statusCode)
+        public IActionResult Error404()
         {
-            switch (statusCode)
-            {
-                case 404:
-                    return View("Error404");
-            }
-            return View("Error404");
+            return View();
         }
     }
 }

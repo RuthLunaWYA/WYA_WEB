@@ -128,7 +128,6 @@ function initCarousel(carousel) {
 
     carousel._destroy = () => clearInterval(autoTimer);
 }
-
 /* ========== BOOTSTRAP APP ========== */
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
@@ -141,4 +140,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     document.querySelectorAll('.carousel').forEach(initCarousel);
+
+    /* ========== CARD ANIMATION ========== */
+    const sections = document.querySelectorAll('.section-animate');
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });
