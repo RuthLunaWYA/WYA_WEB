@@ -159,8 +159,32 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
-
 /* =====CARDS ======== */
+.icon-card {
+    background-color: #fff;
+    border-radius: 10px 10px 0 10px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto;
+    margin-top: -80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-2 {
+    background-color: var(--color-wya-6);
+    color: var(--color-wya-1);
+    border-radius: 0 30px 30px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 20px 20px 20px;
+    min-height: 350px;
+    z-index: 9999;
+}
+    .card-2 h3 {
+        color: var(--color-wya-1);
+        font-weight: bold;
+    }
 .card {
     flex: 0 0 calc(100% / 3 - 20px);
     margin: 10px;
@@ -449,4 +473,24 @@
     .section-animate.visible {
         opacity: 1;
         animation: fadeIn 0.6s ease-out forwards;
+    }
+
+
+/*=================FONDO DEGRADADO DE SECCIONES=================*/
+.section-group {
+    position: relative;
+    background: linear-gradient( to bottom, rgba(255, 255, 255, 0) 0%, #F7E0FF 40%, #F7E0FF 10%, rgba(255, 255, 255, 0) 100% );
+    z-index: 1;
+}
+
+    .section-group::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: inherit;
+        filter: blur(10px);
+        z-index: -1;
     }
