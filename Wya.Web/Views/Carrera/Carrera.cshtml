@@ -2,7 +2,7 @@
     ViewData["Title"] = "Carrera";
 }
 
-<section class="hero d-flex align-items-center" style="background-image: url('/images/banner-carrera.webp');">
+<section class="hero d-flex align-items-center section-animate" style="background-image: url('/images/banner-carrera.webp');">
     <div class="container text-start">
         <h1 class="hero-title">Trabaja con nosotros en WYA</h1>
         <p class="hero-subtitle">Únete a Nuestro Equipo en WYA SOLUCIONES INTEGRALES </p>
@@ -17,7 +17,7 @@
 </section>
 
 <div class="section-group">
-    <section class="py-5">
+    <section class="section-animate py-5">
         <div class="container">
             <h1 class="title text-center mb-4">CANALES</h1>
             <h3 class="sub-title text-center mb-4">
@@ -25,21 +25,20 @@
             </h3>
             <div class="d-flex flex-wrap justify-content-center">
                 <div class="card card-4">
-                    <img src="/images/logo-linkedin.svg" alt="Linkedin">
+                    <img src="/images/logo-linkedin.svg" alt="Linkedin" loading="lazy">
                 </div>
                 <div class="card card-4">
-                    <img src="/images/logo-bomberan.svg" alt="Boomberano">
+                    <img src="/images/logo-bomberan.svg" alt="Boomberano" loading="lazy">
                 </div>
                 <div class="card card-4">
-                    <img src="/images/logo-computrabajo.svg" alt="CompuTrabajo">
+                    <img src="/images/logo-computrabajo.svg" alt="CompuTrabajo" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-5">
+    <section class="section-animate py-5">
         <h1 class="title text-center mb-4">OPORTUNIDADES ACTUALES</h1>
         <div class="container card-3 p-5" style="background-image: url('/images/nuestrosvalores.webp');">
-            
         </div>
         <div class="p-5" style="margin-top:-200px;">
             <div class="wrapper-carrera">
@@ -47,43 +46,100 @@
                     <input type="radio" name="slide-carrera" id="c1" checked>
                     <label for="c1" class="card-carrera">
                         <div class="row-carrera">
-                            <div class="icon-carrera">1</div>
+                            <div class="icon-carrera"></div>
                             <div class="description-carrera">
                                 <h4>Desarrollador Web</h4>
                                 <p>Únete a nuestro equipo de desarrollo para crear soluciones innovadoras.</p>
+                            </div>
+                            <div class="vertical-title">
+                                <h4>Desarrollador Web</h4>
                             </div>
                         </div>
                     </label>
                     <input type="radio" name="slide-carrera" id="c2">
                     <label for="c2" class="card-carrera">
                         <div class="row-carrera">
-                            <div class="icon-carrera">2</div>
+                            <div class="icon-carrera"></div>
                             <div class="description-carrera">
                                 <h4>Analista de Datos</h4>
                                 <p>Analiza datos para impulsar decisiones estratégicas.</p>
+                            </div>
+                            <div class="vertical-title">
+                                <h4>Analista de Datos</h4>
                             </div>
                         </div>
                     </label>
                     <input type="radio" name="slide-carrera" id="c3">
                     <label for="c3" class="card-carrera">
                         <div class="row-carrera">
-                            <div class="icon-carrera">3</div>
+                            <div class="icon-carrera"></div>
                             <div class="description-carrera">
                                 <h4>Especialista en Marketing</h4>
                                 <p>Crea campañas impactantes para nuestra marca.</p>
+                            </div>
+                            <div class="vertical-title">
+                                <h4>Especialista en Marketing</h4>
                             </div>
                         </div>
                     </label>
                     <input type="radio" name="slide-carrera" id="c4">
                     <label for="c4" class="card-carrera">
                         <div class="row-carrera">
-                            <div class="icon-carrera">4</div>
+                            <div class="icon-carrera"></div>
                             <div class="description-carrera">
                                 <h4>Ingeniero de Software</h4>
                                 <p>Desarrolla software de vanguardia para nuestros clientes.</p>
                             </div>
+                            <div class="vertical-title">
+                                <h4>Ingeniero de Software</h4>
+                            </div>
                         </div>
                     </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-animate">
+        <div class="container p-5" style="background: #EEE4F2; border-radius: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h2 class="title text-center mb-5" style="color: #7B2CBF; font-weight: bold;">
+                ¿POR QUÉ WYA SOLUCIONES <br> INTEGRALES?
+            </h2>
+
+            <div class="row align-items-center">
+                <!-- Imagen -->
+                <div class="col-md-6 mb-4 mb-md-0 d-none d-md-block">
+                    <img src="https://picsum.photos/500/300?random=5" alt="Equipo de trabajo" class="img-fluid rounded-4 shadow-sm" style="display: block; margin: 0 auto;" loading="lazy">
+                </div>
+
+                <!-- Texto -->
+                <div class="col-md-6">
+                    <!-- Item 1 -->
+                    <div class="d-flex mb-4 position-relative">
+                        <div class="circle-num">01</div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold" style="color:#7B2CBF;">Crecer Profesionalmente</h5>
+                            <p>Fomentamos el desarrollo continuo y ofrecemos programas de formación para que alcances tu máximo potencial.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="d-flex mb-4 position-relative">
+                        <div class="circle-num">02</div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold" style="color:#7B2CBF;">Impactar Empresas</h5>
+                            <p>Trabaja en proyectos significativos que tienen un impacto real en la eficiencia y éxito de nuestros clientes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="d-flex position-relative">
+                        <div class="circle-num">03</div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold" style="color:#7B2CBF;">Cultura de Colaboración</h5>
+                            <p>Forma parte de un equipo diverso y talentoso que valora la colaboración y la innovación.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

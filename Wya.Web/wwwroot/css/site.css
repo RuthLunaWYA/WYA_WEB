@@ -644,9 +644,27 @@
         object-fit: contain;
     }
 
+.card-5 {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background: #fff;
+    flex: 0 0 calc(100% / 3 - 20px);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+    .card-5 img {
+        max-width: 100%;
+        max-height: 60px;
+        object-fit: contain;
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+    }
 
-/*=========VISTA CARRERA==========*/
-
+/*========== SECCION PARA OPORTUNIDADES ACTUALES ==============*/
 .wrapper-carrera {
     width: 100%;
     display: flex;
@@ -662,7 +680,8 @@
 }
 
 .card-carrera {
-    width: 80px;
+    width: 150px;
+    height: 450px;
     border-radius: .75rem;
     background-size: cover;
     cursor: pointer;
@@ -673,17 +692,17 @@
     align-items: flex-end;
     transition: .6s cubic-bezier(.28,-0.03,0,.99);
     box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    position: relative;
 }
 
     .card-carrera > .row-carrera {
         color: white;
         display: flex;
         flex-wrap: nowrap;
+        width: 100%;
     }
 
         .card-carrera > .row-carrera > .icon-carrera {
-            background: #223;
-            color: white;
             border-radius: 50%;
             width: 50px;
             display: flex;
@@ -697,21 +716,45 @@
             justify-content: center;
             flex-direction: column;
             overflow: hidden;
-            height: 80px;
+            height: 120px;
             width: 520px;
             opacity: 0;
             transform: translateY(30px);
-            transition-delay: .3s;
             transition: all .3s ease;
         }
 
 .description-carrera p {
-    color: #b0b0ba;
+    color: white;
     padding-top: 5px;
+    font-size: 1.2rem;
 }
 
 .description-carrera h4 {
     text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: bold;
+
+}
+
+.card-carrera > .row-carrera > .vertical-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .3s ease, visibility .3s ease, display .3s ease;
+}
+
+.vertical-title h4 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+
 }
 
 input {
@@ -725,6 +768,12 @@ input {
         input:checked + label .description-carrera {
             opacity: 1 !important;
             transform: translateY(0) !important;
+        }
+
+        input:checked + label .vertical-title {
+            opacity: 0;
+            visibility: hidden;
+            display: none;
         }
 
 .card-carrera[for="c1"] {
@@ -741,4 +790,55 @@ input {
 
 .card-carrera[for="c4"] {
     background-image: url('https://picsum.photos/500/300?random=4');
+}
+
+
+/*=============CUSTOMIZACION DE LA BARRA =============*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#ae54d0, #7b03a8);
+    border-radius: 0;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(#9d4bc0, #6a0294);
+    }
+
+/*==========PORQUE SOLUCIONES INTEGRALES===============*/
+
+.circle-num {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    color: #7B2CBF;
+    border: 6px solid #7B2CBF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    font-size: 1.6rem;
+}
+
+.d-flex.position-relative:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 27px;
+    top: 50px;
+    width: 6px;
+    height: calc(100% + 16px);
+    background: #7B2CBF;
+    z-index: 0;
 }
