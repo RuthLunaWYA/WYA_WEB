@@ -627,6 +627,13 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
+.services-section {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 100%), url('/images/bg-servicios.svg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 .card-4 {
     height: 150px;
     display: flex;

@@ -2,7 +2,7 @@
     ViewData["Title"] = "Contacto";
 }
 
-<section class="hero d-flex align-items-center" style="background-image: url('/images/banner-contacto.webp');">
+<section class="hero d-flex align-items-center section-animate" style="background-image: url('/images/banner-contacto.webp');">
     <div class="container text-start">
         <h1 class="hero-title">Contáctanos en WYA</h1>
         <p class="hero-subtitle">Nuestro equipo está listo para atender tus consultas <br>y brindarte la mejor solución.</p>
@@ -16,50 +16,52 @@
     </div>
 </section>
 
-<section class="contact-section py-5">
-    <div class="container">
-        <h1 class="title text-center mb-4">CONTACTATE CON NOSOTROS</h1>
-        <h3 class="sub-title text-center mb-4">Deje su mensaje y nos comunicaremos con usted en breve</h3>
+<div class="section-group">
+    <section class="contact-section py-5 section-animate">
+        <div class="container">
+            <h1 class="title text-center mb-4">CONTACTATE CON NOSOTROS</h1>
+            <h3 class="sub-title text-center mb-4">Deje su mensaje y nos comunicaremos con usted en breve</h3>
 
-        <div class="row g-4 d-md-flex align-items-md-stretch">
-            <div class="col-md-6 d-none d-md-block">
-                <div class="card shadow h-100" style="border-radius: 20px; background-image: url('/images/contacto.png'); background-size: cover; background-position: center;">
+            <div class="row g-4 d-md-flex align-items-md-stretch">
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="card shadow h-100" style="border-radius: 20px; background-image: url('/images/contacto.png'); background-size: cover; background-position: center;">
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="card shadow h-100" style="border-radius: 20px; background-color: #EEE4F2;">
-                    <div class="card-body p-4">
-                        <h2 class="title text-center mb-4">Envíanos tu consulta</h2>
-                        <form>
-                            <div class="row mb-3">
-                                <div class="col-md-6 text-start">
-                                    <label for="nombres" class="form-label">Nombres *</label>
-                                    <input type="text" class="form-control" id="nombres" required>
+                <div class="col-12 col-md-6">
+                    <div class="card shadow h-100" style="border-radius: 20px; background-color: #EEE4F2;">
+                        <div class="card-body p-4">
+                            <h2 class="title text-center mb-4">Envíanos tu consulta</h2>
+                            <form>
+                                <div class="row mb-3">
+                                    <div class="col-md-6 text-start">
+                                        <label for="nombres" class="form-label">Nombres *</label>
+                                        <input type="text" class="form-control" id="nombres" required>
+                                    </div>
+                                    <div class="col-md-6 text-start">
+                                        <label for="apellidos" class="form-label">Apellidos *</label>
+                                        <input type="text" class="form-control" id="apellidos" required>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 text-start">
-                                    <label for="apellidos" class="form-label">Apellidos *</label>
-                                    <input type="text" class="form-control" id="apellidos" required>
+                                <div class="mb-3 text-start">
+                                    <label for="correo" class="form-label">Correo electrónico *</label>
+                                    <input type="email" class="form-control" id="correo" required>
                                 </div>
-                            </div>
-                            <div class="mb-3 text-start">
-                                <label for="correo" class="form-label">Correo electrónico *</label>
-                                <input type="email" class="form-control" id="correo" required>
-                            </div>
-                            <div class="mb-3 text-start">
-                                <label for="telefono" class="form-label">Teléfono *</label>
-                                <input type="tel" class="form-control" id="telefono" required>
-                            </div>
-                            <div class="mb-3 text-start">
-                                <label for="mensaje" class="form-label">Escribe tu mensaje sobre preguntas, comentarios o cotizaciones *</label>
-                                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <button type="submit" class="btn custom-btn">Enviar</button>
-                            </div>
-                        </form>
+                                <div class="mb-3 text-start">
+                                    <label for="telefono" class="form-label">Teléfono *</label>
+                                    <input type="tel" class="form-control" id="telefono" required>
+                                </div>
+                                <div class="mb-3 text-start">
+                                    <label for="mensaje" class="form-label">Escribe tu mensaje sobre preguntas, comentarios o cotizaciones *</label>
+                                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn custom-btn">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
