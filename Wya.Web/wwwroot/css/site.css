@@ -320,7 +320,7 @@
 
 
 .features-section {
-    padding: 40px 20px;
+/*    padding: 40px 20px;*/
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -399,9 +399,7 @@
         display: none;
     }
 
-    .column {
-        margin-bottom: 20px;
-    }
+
 }
 
 .features-section img {
@@ -629,6 +627,13 @@
 }
 .services-section {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 100%), url('/images/bg-servicios.svg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.services-section-integrales {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 100%), url('/images/bg-integrales.svg');
     background-size: cover;
     background-position: center;
     padding-top: 3rem;
