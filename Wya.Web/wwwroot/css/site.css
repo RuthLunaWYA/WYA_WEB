@@ -908,3 +908,138 @@ input {
     align-items: center;
     justify-content: center;
 }
+
+
+/* ==========  CARD GRADIENTE MORADO============*/
+.card-gradient-purple {
+    background: linear-gradient(to bottom, #48105D, #590C76);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 3rem;
+}
+
+    .card-gradient-purple h2,
+    .card-gradient-purple p,
+    .card-gradient-purple li {
+        color: white;
+    }
+
+    .card-gradient-purple ul {
+        margin-top: 0.5rem;
+    }
+
+    .card-gradient-purple li {
+        margin-bottom: 0.5rem;
+    }
+
+
+
+/* =====CARDS ======== */
+
+.card_dedicado {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+    .card_dedicado:hover {
+        transform: scale(1.02);
+    }
+
+    .card_dedicado .card-image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card_dedicado img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s ease;
+    }
+
+    /* Efecto de división de imagen */
+    .card_dedicado:hover img {
+        transform: translateY(-50%);
+    }
+
+    /* Texto oculto por defecto */
+    .card_dedicado .card-text {
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(to top, rgba(72, 16, 93, 0.95), rgba(89, 12, 118, 0.8));
+        color: white;
+        padding: 20px;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.7s ease;
+    }
+
+    /* Texto visible con animación */
+    .card_dedicado:hover .card-text {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    .card_dedicado h3 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .card_dedicado p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+.title-dedicado {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-size: 1.75em;
+    font-weight: bold;
+    color: var(--color-wya-3);
+}
+
+/* ===== RESPONSIVE===== */
+@media (max-width: 768px) {
+    .title-dedicado {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .card_dedicado h3 {
+        font-size: 1.2rem;
+    }
+
+    .card_dedicado .card-text p {
+        font-size: 0.9rem;/
+    }
+
+    .card_dedicado {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-dedicado {
+        font-size: 1.1em;
+    }
+
+    .card_dedicado h3 {
+        font-size: 1rem;
+    }
+
+    .card_dedicado .card-text p {
+        font-size: 0.8rem;
+    }
+}
